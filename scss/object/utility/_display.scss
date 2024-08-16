@@ -1,0 +1,11 @@
+@use "../../foundation/forwards" as *;
+
+.u-no-display{
+  display: none;
+}
+.u-pc-no-display {
+  display: block;
+  @include breakpoint(pc) {
+    display: none;
+  }
+}

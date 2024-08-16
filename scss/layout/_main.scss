@@ -1,0 +1,40 @@
+@use "../foundation/forwards" as *;
+
+.l-main {
+  grid-area: main;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  &__hero {
+    height: 285px;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(pc) {
+      height: 530px;
+    }
+  }
+
+  &__service {
+    position: relative;
+    background-color: $c-main-bg;
+  }
+
+  &__info {
+    position: relative;
+    width: 100%;
+    height: 690px;
+    display: flex;
+    justify-content: center;
+    @include breakpoint(tablet) {
+      display: block;
+      height: 405px;
+    }
+
+    @include breakpoint(pc) {
+      height: 649px;
+    }
+  }
+}
+
+

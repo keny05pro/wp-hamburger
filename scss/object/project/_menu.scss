@@ -1,0 +1,57 @@
+@use "../../foundation/forwards" as *;
+
+.p-menu {
+  position: relative;
+  width: 328px;
+  height: 100%;
+  color: $c-gray;
+  background-color: $c-sidebar-bg;
+  margin-left: auto;
+  overflow-y: auto;
+
+  @include breakpoint(tablet) {
+    font-size: 3.4rem;
+    width: 376px;
+  }
+
+  @include breakpoint(pc) {
+    width: 100%;
+  }
+
+  & .p-hamburger {
+    margin-left: auto;
+
+    @include breakpoint(pc) {
+      margin-left: 0;
+    }
+  }
+  &__item {
+    margin-top: 48px;
+
+    &:nth-child(2){
+      margin-top: 134px;
+      @include breakpoint(tablet) {
+        margin-top: 121px;
+      }
+    }
+
+    &:last-child{
+      margin-bottom: 32px;
+    }
+
+    &-title {
+      display: block;
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+  }
+
+  &__list {
+    &-item {
+      font-size: 2rem;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@use "../foundation/forwards" as *;
+
+.l-header {
+  grid-area: header;
+  position: relative;
+  width: 100%;
+  background-color: $c-header-bg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include breakpoint(pc) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-weight: bold;
+    font-size: 2rem;
+    color: $c-gray;
+
+    @include breakpoint(tablet) {
+      top: 20px;
+      right: 25px;
+      font-size: 3.4rem;
+    }
+
+    @include breakpoint(pc) {
+      display: none;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-top: 43px;
+
+    @include breakpoint(tablet) {
+      margin-top: 40px;
+    }
+
+    @include breakpoint(pc) {
+      margin-top: 0;
+      margin-left: 4%;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    @include breakpoint(pc) {
+      justify-content: end;
+      margin-right: 2%;
+    }
+  }
+
+  &__sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+    &.active {
+      transform: translateX(0);
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@use "../../foundation/forwards" as *;
+
+.p-search {
+  position: relative;
+  width: 100%;
+  max-width: 318px;
+  height: 46px;
+  display: flex;
+  justify-content: space-between;
+
+  @include breakpoint(tablet) {
+    max-width: 546px;
+  }
+
+  &::before {
+    content: "\f002";
+    font-weight: bold;
+    position: absolute;
+    display: block;
+    margin-left: 5px;
+    font-size: 2.4rem;
+    line-height: 45px;
+  }
+
+  & input[type="text"] {
+    border-radius: 10px;
+    width: calc(100% - 102px); /* 100%からsubmitボタンの幅とマージンを引いた幅 */
+    font-weight: bold;
+    @include breakpoint(tablet) {
+      width: calc(100% - 150px); /* 100%からsubmitボタンの幅とマージンを引いた幅 */
+    }
+  }
+
+  & input[type="submit"] {
+    display: block;
+    width: 90px;
+    border-radius: 10px;
+    margin-left: 12px;
+    color: $c-gray;
+    font-weight: bold;
+
+    @include breakpoint(tablet) {
+      width: 136px;
+      margin-left: 14px;
+    }
+  }
+}
