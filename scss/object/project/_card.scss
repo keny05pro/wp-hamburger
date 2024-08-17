@@ -3,10 +3,9 @@
 .p-service-card {
   position: relative;
   width: auto;
-  height: 624px;
+  height: auto;
   margin-bottom: 20px;
-  max-width: $sp-max-width;
-
+  flex: 1;
   
   @include breakpoint(tablet) {
     margin-bottom: 0;
@@ -22,6 +21,7 @@
     font-weight: bold;
     font-size: 4.1rem;
     line-height: 4.8rem;
+    margin-bottom: 70%;
 
     &::after {
       content: "";
@@ -87,7 +87,6 @@
     font-weight: bold;
     font-size: 3rem;
     line-height: 4.45rem;
-
     @include breakpoint(pc) {
       font-size: 3.6rem;
       line-height: 5.34rem;

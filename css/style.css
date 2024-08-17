@@ -97,6 +97,15 @@ body {
   font-weight: 400;
 }
 
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+input {
+  cursor: pointer;
+}
+
 .l-header {
   grid-area: header;
   position: relative;
@@ -120,6 +129,7 @@ body {
   font-weight: bold;
   font-size: 2rem;
   color: #707070;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -198,6 +208,8 @@ body {
 .l-main__service {
   position: relative;
   background-color: #fffdfa;
+  display: flex;
+  justify-content: center;
 }
 
 .l-main__info {
@@ -227,9 +239,8 @@ body {
   width: 100%;
   height: 100%;
   transform: translateX(100%);
-  transition: all 0.3s ease;
-  background-color: rgba(0, 0, 0, 0.502);
-  z-index: 900;
+  transition: transform 0.7s ease;
+  z-index: 2000;
 }
 
 @media (min-width: 1200px) {
@@ -269,6 +280,25 @@ body {
   line-height: 2rem;
 }
 
+.l-grid {
+  display: grid;
+  grid-template-rows: 215px 1fr 150px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header header sidebar" "main main main" "footer footer footer";
+}
+
+@media (min-width: 1200px) {
+  .l-grid {
+    grid-template-rows: 217px 1fr 150px;
+    grid-template-columns: 1fr 1fr 20%;
+    grid-template-areas: "header header sidebar" "main main sidebar" "footer footer footer";
+  }
+}
+@media (min-width: 1600px) {
+  .l-grid {
+    grid-template-columns: 1fr 1fr 368px;
+  }
+}
 .l-global-container {
   padding: 0 20px;
   height: auto;
@@ -310,9 +340,12 @@ body {
 .l-service-container {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
   padding: 20px 0 30px;
   height: auto;
-  align-items: center;
+  max-width: 475px;
+  max-width: 95%;
 }
 
 @media (min-width: 768px) {
@@ -335,16 +368,19 @@ body {
   justify-content: space-between;
   padding: 13px 16px 16px;
   height: 100%;
+  max-width: 475px;
 }
 
 @media (min-width: 768px) {
   .l-service-card-container {
     padding: 16px;
+    max-width: 475px;
   }
 }
 @media (min-width: 1200px) {
   .l-service-card-container {
     padding: 28px 15px 15px;
+    max-width: 624px;
   }
 }
 .l-inner-card-container {
@@ -385,31 +421,12 @@ body {
     padding: 41px 0 27px;
   }
 }
-.l-grid {
-  display: grid;
-  grid-template-rows: 215px 1fr 150px;
-  grid-template-columns: 1fr;
-  grid-template-areas: "header header sidebar" "main main main" "footer footer footer";
-}
-
-@media (min-width: 1200px) {
-  .l-grid {
-    grid-template-rows: 217px 1fr 150px;
-    grid-template-columns: 1fr 1fr 20%;
-    grid-template-areas: "header header sidebar" "main main sidebar" "footer footer sidebar";
-  }
-}
-@media (min-width: 1600px) {
-  .l-grid {
-    grid-template-columns: 1fr 1fr 368px;
-  }
-}
 .p-service-card {
   position: relative;
   width: auto;
-  height: 624px;
+  height: auto;
   margin-bottom: 20px;
-  max-width: 475px;
+  flex: 1;
 }
 
 @media (min-width: 768px) {
@@ -428,6 +445,7 @@ body {
   font-weight: bold;
   font-size: 4.1rem;
   line-height: 4.8rem;
+  margin-bottom: 70%;
 }
 
 .p-service-card__title::after {
@@ -659,19 +677,26 @@ body {
   }
 }
 .p-search::before {
-  content: "\f002";
-  font-weight: bold;
   position: absolute;
   display: block;
-  margin-left: 5px;
-  font-size: 2.4rem;
-  line-height: 45px;
+  font-family: "Material Symbols Outlined";
+  content: "\e8b6";
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 47px;
+  margin-left: 4px;
+  color: #707070;
+}
+
+.p-search input {
+  border: 1px solid #707070;
 }
 
 .p-search input[type=text] {
   border-radius: 10px;
   width: calc(100% - 102px); /* 100%からsubmitボタンの幅とマージンを引いた幅 */
   font-weight: bold;
+  padding-left: 30px;
 }
 
 @media (min-width: 768px) {
@@ -734,6 +759,23 @@ body {
   height: 2px;
   background-color: #ffffff;
   margin-top: 20px;
+}
+
+.p-sidebar-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1500;
+  background-color: rgba(0, 0, 0, 0.502);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.p-sidebar-layer.active {
+  opacity: 1;
 }
 
 .p-info-layer {

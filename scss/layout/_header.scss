@@ -21,7 +21,7 @@
     font-weight: bold;
     font-size: 2rem;
     color: $c-gray;
-
+    cursor: pointer;
     @include breakpoint(tablet) {
       top: 20px;
       right: 25px;

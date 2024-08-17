@@ -18,6 +18,8 @@
   &__service {
     position: relative;
     background-color: $c-main-bg;
+    display: flex;
+    justify-content: center;
   }
 
   &__info {

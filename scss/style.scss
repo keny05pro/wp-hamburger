@@ -9,18 +9,16 @@
 @use "./layout/main";
 @use "./layout/sidebar";
 @use "./layout/footer";
-@use "./layout/container";
-@use "./layout/grid";
 
 // project
 // component
-@use "./object/component/button" as c-btn;
-@use "./object/component/text" as c-text;
+@use "./object/component/grid";
+@use "./object/component/container";
 
 // component
 @use "./object/project/button";
 @use "./object/project/card";
-@use "./object/project/hamburger";
+@use "./object/project/icon";
 @use "./object/project/menu";
 @use "./object/project/input";
 @use "./object/project/text";

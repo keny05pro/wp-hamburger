@@ -13,19 +13,25 @@
   }
 
   &::before {
-    content: "\f002";
-    font-weight: bold;
     position: absolute;
     display: block;
-    margin-left: 5px;
-    font-size: 2.4rem;
-    line-height: 45px;
+    font-family: "Material Symbols Outlined";
+    content: "\e8b6";  
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 47px;
+    margin-left: 4px;
+    color: $c-gray;
   }
 
+  & input{
+    border: 1px solid $c-gray;
+  }
   & input[type="text"] {
     border-radius: 10px;
     width: calc(100% - 102px); /* 100%からsubmitボタンの幅とマージンを引いた幅 */
     font-weight: bold;
+    padding-left:30px;
     @include breakpoint(tablet) {
       width: calc(100% - 150px); /* 100%からsubmitボタンの幅とマージンを引いた幅 */
     }

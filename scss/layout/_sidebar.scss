@@ -8,21 +8,19 @@
   width: 100%;
   height: 100%;
   transform: translateX(100%);
-  transition: all 0.3s ease;
-  background-color: $c-sidebar-bg-cover;
-  z-index: 900;
+  transition: transform 0.7s ease;
+  z-index: 2000;
 
   @include breakpoint(pc) {
-  position: relative;
-  transform: translateX(0);
-
+    position: relative;
+    transform: translateX(0);
   }
 
   &.active {
     transform: translateX(0);
   }
 
-  & .p-menu{
+  & .p-menu {
     z-index: 1000;
   }
 }

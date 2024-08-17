@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hamburger</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -13,7 +17,7 @@
           <span class="js-menu-btn">Menu</span>
         </div>
         <div class="l-header__title">
-          <span class="p-main-title">Hamburger</span>
+          <span class="p-main-title"><a href="#">Hamburger</a></span>
         </div>
         <div class="l-header__form">
           <form action="" class="p-search">
@@ -22,42 +26,61 @@
           </form>
         </div>
       </header>
+      <div class="p-sidebar-layer js-hamburger"></div>
       <nav class="l-sidebar js-hamburger">
         <div class="p-menu">
           <div class="l-menu-container">
             <div class="p-hamburger js-hamburger-btn">
-              <span></span>
+              <a href="">
+                <span></span>
+              </a>
             </div>
             <div class="p-menu__item">
-              <span class="p-menu__item-title">バーガー</span>
+              <span class="p-menu__item-title"><a href="">バーガー</a></span>
               <ul class="p-menu__list l-menu-list-container">
-                <li class="p-menu__list-item">ハンバーガー</li>
-                <li class="p-menu__list-item">チーズハンバーガー</li>
-                <li class="p-menu__list-item">テリヤキハンバーガー</li>
-                <li class="p-menu__list-item">アボカドハンバーガー</li>
-                <li class="p-menu__list-item">フィッシュハンバーガー</li>
-                <li class="p-menu__list-item">ベーコンハンバーガー</li>
-                <li class="p-menu__list-item">チキンハンバーガー</li>
+                <li class="p-menu__list-item"><a href="">ハンバーガー</a></li>
+                <li class="p-menu__list-item">
+                  <a href="">チーズハンバーガー</a>
+                </li>
+                <li class="p-menu__list-item">
+                  <a href="">テリヤキハンバーガー</a>
+                </li>
+                <li class="p-menu__list-item">
+                  <a href="">アボカドハンバーガー</a>
+                </li>
+                <li class="p-menu__list-item">
+                  <a href="">フィッシュハンバーガー</a>
+                </li>
+                <li class="p-menu__list-item">
+                  <a href="">ベーコンハンバーガー</a>
+                </li>
+                <li class="p-menu__list-item">
+                  <a href="">チキンハンバーガー</a>
+                </li>
               </ul>
             </div>
             <div class="p-menu__item">
-              <span class="p-menu__item-title">サイド</span>
+              <span class="p-menu__item-title"><a href="">サイド</a></span>
               <ul class="p-menu__list l-menu-list-container">
-                <li class="p-menu__list-item">ポテト</li>
-                <li class="p-menu__list-item">サラダ</li>
-                <li class="p-menu__list-item">ナゲット</li>
-                <li class="p-menu__list-item">コーン</li>
+                <li class="p-menu__list-item"><a href="">ポテト</a></li>
+                <li class="p-menu__list-item"><a href="">サラダ</a></li>
+                <li class="p-menu__list-item"><a href="">ナゲット</a></li>
+                <li class="p-menu__list-item"><a href="">コーン</a></li>
               </ul>
             </div>
             <div class="p-menu__item">
-              <span class="p-menu__item-title">ドリンク</span>
+              <span class="p-menu__item-title"><a href=""></a>ドリンク</span>
               <ul class="p-menu__list l-menu-list-container">
-                <li class="p-menu__list-item">コーラ</li>
-                <li class="p-menu__list-item">ファンタ</li>
-                <li class="p-menu__list-item">オレンジ</li>
-                <li class="p-menu__list-item">アップル</li>
-                <li class="p-menu__list-item">紅茶（Ice/Hot）</li>
-                <li class="p-menu__list-item">コーヒー（Ice/Hot）</li>
+                <li class="p-menu__list-item"><a href="">コーラ</a></li>
+                <li class="p-menu__list-item"><a href="">ファンタ</a></li>
+                <li class="p-menu__list-item"><a href="">オレンジ</a></li>
+                <li class="p-menu__list-item"><a href="">アップル</a></li>
+                <li class="p-menu__list-item">
+                  <a href="">紅茶（Ice/Hot）</a>
+                </li>
+                <li class="p-menu__list-item">
+                  <a href="">コーヒー（Ice/Hot）</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -72,46 +95,50 @@
           <section class="l-main__service">
             <div class="l-service-container">
               <div class="p-service-card p-takeout-img">
-                <div class="l-service-card-container">
-                  <h3 class="p-service-card__title">Take Out</h3>
-                  <div class="p-service-card__item u-mt-auto u-mb-16">
-                    <div class="l-inner-card-container">
-                      <h4>Take OUT</h4>
-                      <p>
-                        当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています
-                      </p>
+                <a href="">
+                  <div class="l-service-card-container">
+                    <h3 class="p-service-card__title">Take Out</h3>
+                    <div class="p-service-card__item u-mt-auto u-mb-16">
+                      <div class="l-inner-card-container">
+                        <h4>Take OUT</h4>
+                        <p>
+                          当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています
+                        </p>
+                      </div>
+                    </div>
+                    <div class="p-service-card__item">
+                      <div class="l-inner-card-container">
+                        <h4>Take OUT</h4>
+                        <p>
+                          当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div class="p-service-card__item">
-                    <div class="l-inner-card-container">
-                      <h4>Take OUT</h4>
-                      <p>
-                        当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                </a>
               </div>
               <div class="p-service-card p-eatin-img">
-                <div class="l-service-card-container">
-                  <h3 class="p-service-card__title">Eat In</h3>
-                  <div class="p-service-card__item u-mt-auto u-mb-16">
-                    <div class="l-inner-card-container">
-                      <h4>Eat In</h4>
-                      <p>
-                        当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています
-                      </p>
+                <a href="">
+                  <div class="l-service-card-container">
+                    <h3 class="p-service-card__title">Eat In</h3>
+                    <div class="p-service-card__item u-mt-auto u-mb-16">
+                      <div class="l-inner-card-container">
+                        <h4>Eat In</h4>
+                        <p>
+                          店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
+                        </p>
+                      </div>
+                    </div>
+                    <div class="p-service-card__item">
+                      <div class="l-inner-card-container">
+                        <h4>Eat In</h4>
+                        <p>
+                          店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div class="p-service-card__item">
-                    <div class="l-inner-card-container">
-                      <h4>Eat In</h4>
-                      <p>
-                        当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                </a>
               </div>
             </div>
           </section>
@@ -130,7 +157,9 @@
               <div class="l-info-card-container">
                 <h3 class="p-info-card__title">見出しが入ります</h3>
                 <div class="p-info-card__desc">
-                  テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りま</div>
+                  テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りま
+                  テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りま
+                </div>
               </div>
             </div>
           </section>
@@ -138,7 +167,7 @@
       </main>
       <footer class="l-footer">
         <div class="l-footer-container">
-          <span>ショップ情報 | ヒストリー</span>
+          <span><a href="">ショップ情報</a> | <a href="">ヒストリー</a></span>
           <small>Copyright: RaiseTech</small>
         </div>
       </footer>
