@@ -216,6 +216,7 @@ input {
     display: block;
   }
 }
+
 .l-sidebar {
   grid-area: sidebar;
   position: fixed;
