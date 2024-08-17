@@ -3,6 +3,10 @@
 .u-no-display{
   display: none;
 }
+
+.u-over-hidden{
+  overflow: hidden;
+}
 .u-pc-no-display {
   display: block;
   @include breakpoint(pc) {

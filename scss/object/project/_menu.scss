@@ -20,7 +20,7 @@
 
   & .p-hamburger {
     margin-left: auto;
-
+    cursor: pointer;
     @include breakpoint(pc) {
       margin-left: 0;
     }
@@ -28,14 +28,14 @@
   &__item {
     margin-top: 48px;
 
-    &:nth-child(2){
+    &:nth-child(2) {
       margin-top: 134px;
       @include breakpoint(tablet) {
         margin-top: 121px;
       }
     }
 
-    &:last-child{
+    &:last-child {
       margin-bottom: 32px;
     }
 
@@ -53,5 +53,12 @@
         margin-bottom: 20px;
       }
     }
+  }
+
+  //スクロールバー設定
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
   }
 }
