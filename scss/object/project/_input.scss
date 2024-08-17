@@ -31,7 +31,7 @@
     border-radius: 10px;
     width: calc(100% - 102px); /* 100%からsubmitボタンの幅とマージンを引いた幅 */
     font-weight: bold;
-    padding-left:30px;
+    padding-left:40px;
     @include breakpoint(tablet) {
       width: calc(100% - 150px); /* 100%からsubmitボタンの幅とマージンを引いた幅 */
     }

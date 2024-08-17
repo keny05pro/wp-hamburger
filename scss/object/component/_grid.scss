@@ -1,6 +1,6 @@
 @use "../../foundation/forwards" as *;
 $footer-height: 150px;
-.l-grid {
+.c-grid {
   display: grid;
   grid-template-rows: $sp-header-height 1fr $footer-height;
   grid-template-columns: 1fr;

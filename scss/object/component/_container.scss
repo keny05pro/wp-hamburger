@@ -1,6 +1,6 @@
 @use "../../foundation/forwards" as *;
 
-.l-global-container {
+.c-global-container {
   padding: 0 20px;
   height: auto;
   @include breakpoint(tablet) {
@@ -11,7 +11,7 @@
   }
 }
 
-.l-menu-container {
+.c-menu-container {
   padding: 8px 11px 0 46px;
 
   @include breakpoint(tablet) {
@@ -22,7 +22,7 @@
   }
 }
 
-.l-menu-list-container {
+.c-menu-list-container {
   padding: 40px 0 0 20px;
 
   @include breakpoint(tablet) {
@@ -30,7 +30,7 @@
   }
 }
 
-.l-service-container {
+.c-service-container {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -53,7 +53,7 @@
   }
 }
 
-.l-service-card-container {
+.c-service-card-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -72,11 +72,11 @@
   }
 }
 
-.l-inner-card-container {
+.c-inner-card-container {
   padding: 16px;
 }
 
-.l-info-card-container {
+.c-info-card-container {
   padding: 42px calc(40px - 20px) 57px; //calc 40px(デザインカンプ) 20px(global-container)
   height: 100%;
   @include breakpoint(tablet) {
@@ -88,7 +88,7 @@
   }
 }
 
-.l-footer-container {
+.c-footer-container {
   width: 100%;
   height: 100%;
   display: flex;
