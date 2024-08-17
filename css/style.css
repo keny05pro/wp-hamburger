@@ -215,7 +215,7 @@ input {
 .l-main__info {
   position: relative;
   width: 100%;
-  height: 690px;
+  height: auto;
   display: flex;
   justify-content: center;
 }
@@ -223,12 +223,6 @@ input {
 @media (min-width: 768px) {
   .l-main__info {
     display: block;
-    height: 405px;
-  }
-}
-@media (min-width: 1200px) {
-  .l-main__info {
-    height: 649px;
   }
 }
 .l-sidebar {
@@ -503,7 +497,6 @@ input {
   z-index: 700;
   color: #ffffff;
   max-width: 475px;
-  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -783,7 +776,7 @@ input {
   top: 0;
   left: 0;
   width: 100vw;
-  height: inherit;
+  height: 100%;
   background-color: #000000;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);

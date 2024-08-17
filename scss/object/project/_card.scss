@@ -75,7 +75,6 @@
   z-index: 700;
   color: $c-white;
   max-width: $sp-max-width;
-  overflow: hidden;
   @include breakpoint(tablet) {
     max-width: $tablet-max-width;
   }
