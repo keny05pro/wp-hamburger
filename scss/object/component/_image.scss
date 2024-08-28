@@ -1,0 +1,16 @@
+@use "../../foundation/forwards" as *;
+
+.c-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  width: 100%;
+
+  &--full {
+    @extend .c-img;
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+  }
+}
+

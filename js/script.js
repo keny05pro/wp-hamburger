@@ -4,15 +4,17 @@ const targets = document.querySelectorAll(".js-hamburger");
 const body = document.querySelector("body");
 
 targets.forEach((target) => {
-  menuBtn.addEventListener("click", (e) => {
+  menuBtn.addEventListener("click", () => {
     target.classList.add("active");
     body.classList.add("u-over-hidden");
   });
 });
 
 targets.forEach((target) => {
-  hamburgerBtn.addEventListener("click", (e) => {
+  hamburgerBtn.addEventListener("click", () => {
     target.classList.remove("active");
     body.classList.remove("u-over-hidden");
   });
 });
+
+

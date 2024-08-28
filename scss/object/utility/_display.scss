@@ -13,3 +13,19 @@
     display: none;
   }
 }
+
+.u-sp-no-display {
+  @include breakpoint(sp) {
+    display: none;
+  }
+}
+
+
+
+.u-rotate-reverse{
+  transform: rotate(180deg);
+}
+
+.u-flex-reverse{
+  flex-direction: row-reverse;
+}

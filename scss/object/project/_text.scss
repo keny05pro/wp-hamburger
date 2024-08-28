@@ -1,5 +1,6 @@
 @use "../../foundation/forwards" as *;
 
+//header
 .p-main-title {
   font-weight: bold;
   font-size: 4rem;
@@ -11,30 +12,180 @@
   }
 }
 
+//hero
 .p-hero-title {
-  position: absolute;
-  z-index: 500;
-  font-weight: bold;
-  font-size: 3.6rem;
-  line-height: 53.46px;
+  display: flex;
+  flex-direction: column;
   color: $c-white;
+  font-weight: bold;
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    align-items: center;
+  }
+
   @include breakpoint(pc) {
-    font-size: 4rem;
-    line-height: 5.94rem;
     margin-left: -34px;
+  }
+
+  &__main {
+    font-size: 3.6rem;
+    line-height: 5rem;
+
+    @include breakpoint(pc) {
+      font-size: 4rem;
+      line-height: 6rem;
+    }
+
+    &--archive,
+    &--single {
+      @include breakpoint(tablet) {
+        font-size: 6rem;
+        line-height: 7rem;
+      }
+    }
+  }
+
+  &__sub {
+    display: block;
+    margin: 10px 0 0 0;
+    @include breakpoint(tablet) {
+      margin: 10px 0 0 20px;
+    }
   }
 }
 
-.p-service-title {
-  font-weight: bold;
-  font-size: 4.4rem;
+.p-archive-content {
+  &__title {
+    font-size: 2.8rem;
+    line-height: 4rem;
+    margin-bottom: 25px;
 
-  &::after {
-    content: "";
+    @include breakpoint(tablet) {
+      font-size: 3.6rem;
+      line-height: 5rem;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.p-heading-content {
+  font-weight: bold;
+  &__desc {
+    font-weight: normal;
+  }
+  &__h2 {
+    font-size: 2.8rem;
+    line-height: 4rem;
+  }
+  &__h3 {
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+  }
+
+  &__h4,
+  &__h5,
+  &__h6 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
+.p-quote {
+  background-color: $c-light-gray;
+
+  &__text {
+    margin-bottom: 5px;
+    @include breakpoint(tablet) {
+      margin-bottom: 60px;
+    }
+  }
+  //aタグデフォルト
+  & a {
+    &:link {
+      color: #0000ee;
+      text-decoration: underline;
+    }
+
+    &:visited {
+      color: #551a8b;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: #ff0000;
+      text-decoration: underline;
+    }
+  }
+}
+
+.p-feature {
+  height: 100%;
+
+  &__topImg {
+    width: 100%;
+    height: auto;
+    min-height: 125px;
+    object-fit: cover;
+    margin-bottom: 30px;
+
+    @include breakpoint(tablet) {
+      max-height: 265px;
+      margin-bottom: 60px;
+    }
+
+    @include breakpoint(pc) {
+      max-height: 400px;
+    }
+
+    @include breakpoint(l-pc) {
+      max-height: 500px;
+    }
+  }
+
+  &__bottomImg {
     display: block;
-    width: 36px;
-    height: 2px;
-    background-color: $c-white;
-    margin-top: 20px;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 580px;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    max-height: 360px;
+  }
+}
+
+.p-list {
+  &--inner {
+    margin-top: 17px;
+    margin-left: 18px;
+  }
+}
+
+.p-code {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  &__pre {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.p-table {
+  width: 100%;
+  border: 1px solid $c-gray;
+  border-collapse: collapse;
+  height: 380px;
+  & th {
+    width: 30%;
+    font-weight: 400;
+    border: 1px solid $c-gray;
+  }
+
+  & td {
+    width: 70%;
+    padding-left: 30px;
+    border: 1px solid $c-gray;
   }
 }

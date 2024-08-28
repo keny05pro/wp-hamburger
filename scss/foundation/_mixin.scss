@@ -1,7 +1,11 @@
 @use "./variables" as *;
 
 @mixin breakpoint($breakpoint) {
-  @if $breakpoint == tablet {
+  @if $breakpoint == sp {
+    @media (max-width: $breakpoint-sp) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
     @media (min-width: $breakpoint-tablet) {
       @content;
     }

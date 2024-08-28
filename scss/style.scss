@@ -14,8 +14,10 @@
 // component
 @use "./object/component/grid";
 @use "./object/component/container";
+@use "./object/component/image";
 
 // component
+@use "./object/project/gallery";
 @use "./object/project/button";
 @use "./object/project/card";
 @use "./object/project/icon";
@@ -23,7 +25,6 @@
 @use "./object/project/input";
 @use "./object/project/text";
 @use "./object/project/layer";
-@use "./object/project/image";
 
 // utility
 @use "./object/utility/display";

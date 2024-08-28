@@ -1,0 +1,85 @@
+@use "../../foundation/forwards" as *;
+
+.p-detail-btn {
+  display: block;
+  font-weight: bold;
+  color: $c-gray;
+  background-color: $c-white;
+  text-align: center;
+  border-radius: 20px;
+}
+.p-pagenation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $c-gray;
+  height: 22px;
+
+  @include breakpoint(tablet) {
+    justify-content: center;
+  }
+  &__count {
+    margin-right: 15px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    & .p-page-num {
+      width: 35px;
+      height: 35px;
+      border: 1px solid $c-gray;
+      text-align: center;
+      line-height: 3.3rem;
+      margin-left: 15px;
+      font-weight: bold;
+      &:last-child {
+        margin-right: 15px;
+      }
+      & a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      &.active {
+        background-color: $c-brown;
+        color: $c-white;
+      }
+    }
+  }
+  & a {
+    display: flex;
+    align-items: center;
+  }
+  & .p-pre {
+    line-height: 4rem;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  & .p-next {
+    position: relative;
+    line-height: 4rem;
+    white-space: nowrap;
+  }
+}
+
+.p-single-button {
+  width: 100%;
+  height: 80px;
+  font-weight: bold;
+  background: linear-gradient(to right, #f2ede9, #ded8d3);
+  color: $c-brown;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid $c-gray;
+  & span {
+    line-height: 8rem;
+  }
+
+
+  @include breakpoint(tablet) {
+    width: 50%;
+    max-width: 430px;
+  }
+}
