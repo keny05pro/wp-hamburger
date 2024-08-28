@@ -101,7 +101,7 @@
   }
 }
 
-.c-archive-container {
+.c-archive-container,.c-archive-search-container {
   height: auto;
   padding: 32px 0;
 
@@ -120,18 +120,6 @@
   }
   @include breakpoint(l-pc) {
     padding: 56px 104px 60px 64px;
-  }
-}
-
-.c-single-container {
-  height: auto;
-  padding: 34px 0 70px;
-
-  @include breakpoint(tablet) {
-    padding: 60px 0 150px;
-  }
-  @include breakpoint(pc) {
-    padding: 64px 0 274px;
   }
 }
 

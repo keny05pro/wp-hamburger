@@ -38,6 +38,8 @@
     }
 
     &--archive,
+    &--archive-search,
+    &--page,
     &--single {
       @include breakpoint(tablet) {
         font-size: 6rem;
@@ -55,7 +57,7 @@
   }
 }
 
-.p-archive-content {
+.p-archive-content ,.p-archive-search-content {
   &__title {
     font-size: 2.8rem;
     line-height: 4rem;

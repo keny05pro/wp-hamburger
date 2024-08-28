@@ -62,7 +62,7 @@
   }
 }
 
-.archive {
+.archive ,.archive-search {
   @extend .main-base;
   & .l-main {
     &__hero {
@@ -104,7 +104,7 @@
   }
 }
 
-.single {
+.single,.page {
   @extend .main-base;
   & .l-main {
     &__hero {

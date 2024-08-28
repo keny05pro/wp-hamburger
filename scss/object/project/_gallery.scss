@@ -3,20 +3,19 @@
 .p-gallery {
   width: 100%;
   display: grid;
-  grid-template-rows:1fr;
-  grid-template-columns:1fr ;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
   gap: 16px;
 
   @include breakpoint(tablet) {
-    grid-template-rows:1fr 1fr;
-    grid-template-columns:1fr 1fr;
-  gap: 20px;
-
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 
   @include breakpoint(pc) {
-    grid-template-rows:1fr 1fr 1fr;
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   &__item {
