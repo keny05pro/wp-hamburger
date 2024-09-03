@@ -95,6 +95,7 @@ body {
   font-family: Roboto, "Font Awesome 5 Free";
   font-size: 1.6rem;
   font-weight: 400;
+  background-color: #fffdfa;
 }
 
 a {
@@ -193,6 +194,7 @@ img {
   width: 100%;
   height: auto;
   overflow: hidden;
+  min-height: 64vh;
 }
 .main-base .l-main__hero, .single .l-main__hero, .page .l-main__hero, .archive .l-main__hero, .archive-search .l-main__hero, .front-page .l-main__hero {
   position: relative;
@@ -279,6 +281,7 @@ img {
   }
 }
 .archive .l-main__pagenation, .archive-search .l-main__pagenation {
+  height: auto;
   margin-bottom: 32px;
 }
 @media (min-width: 768px) {
@@ -729,12 +732,25 @@ img {
 }
 .p-pagenation__count {
   margin-right: 15px;
+  white-space: nowrap;
 }
-.p-pagenation__list {
+.p-pagenation ul {
   display: flex;
   flex-direction: row;
+  height: 100%;
 }
-.p-pagenation__list .p-page-num {
+@media (max-width: 767px) {
+  .p-pagenation ul {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.p-pagenation ul li {
+  width: auto;
+  height: 100%;
+}
+.p-pagenation ul li .page-numbers {
+  display: block;
   width: 35px;
   height: 35px;
   border: 1px solid #707070;
@@ -742,32 +758,22 @@ img {
   line-height: 3.3rem;
   margin-left: 15px;
   font-weight: bold;
+  color: #3c2b1c;
 }
-.p-pagenation__list .p-page-num:last-child {
-  margin-right: 15px;
+@media (max-width: 767px) {
+  .p-pagenation ul li .page-numbers {
+    display: none;
+  }
 }
-.p-pagenation__list .p-page-num a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.p-pagenation__list .p-page-num.active {
+.p-pagenation ul li .page-numbers.current {
   background-color: #3c2b1c;
   color: #ffffff;
 }
-.p-pagenation a {
+.p-pagenation ul li .page-numbers.prev, .p-pagenation ul li .page-numbers.next {
   display: flex;
   align-items: center;
-}
-.p-pagenation .p-pre {
-  line-height: 4rem;
-  position: relative;
-  white-space: nowrap;
-}
-.p-pagenation .p-next {
-  position: relative;
-  line-height: 4rem;
-  white-space: nowrap;
+  border: none;
+  width: auto;
 }
 
 .p-button {
@@ -1445,6 +1451,11 @@ img {
   border: 0;
   opacity: 0.6;
   z-index: 100;
+}
+
+.page-numbers.prev,
+.page-numbers.next {
+  visibility: visible; /* 常に表示 */
 }
 
 .u-no-display {

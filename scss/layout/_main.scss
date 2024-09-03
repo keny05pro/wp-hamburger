@@ -6,7 +6,7 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-
+  min-height: 64vh;
   .l-main__hero {
     position: relative;
     display: flex;
@@ -95,12 +95,16 @@
       }
     }
     &__pagenation {
+      height: auto;
       margin-bottom: 32px;
 
       @include breakpoint(tablet) {
         margin-bottom: 64px;
       }
     }
+    // &__alert{
+    //   height: 30vh
+    // }
   }
 }
 

@@ -1,0 +1,16 @@
+@use "../../foundation/forwards" as *;
+
+// ul.page-numbers {
+//   & li {
+//     display: none;
+//     &:first-of-type,
+//     &:last-of-type {
+//       display: block;
+//     }
+//   }
+// }
+
+.page-numbers.prev,
+.page-numbers.next {
+  visibility: visible; /* 常に表示 */
+}
