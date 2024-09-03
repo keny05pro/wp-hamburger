@@ -10,39 +10,39 @@ $info = get_field('info');
 
 <main class="l-main front-page c-global-container">
   <section class="l-main__hero">
-    <div class="l-main__hero__img c-img--full" style="background-image: url('<?php echo get_field('hero_img') ?>')"></div>
+    <div class="l-main__hero__img c-img--full" style="background-image: url('<?php echo esc_url(get_field('hero_img')) ?>')"></div>
     <div class="l-main__hero__title p-hero-title">
       <h2 class="p-hero-title__main"><?php the_title() ?></h2>
     </div>
   </section>
   <section class="l-main__service c-service-container">
-    <a href="" class="p-service-card c-img c-service-card-container" style="background-image: url('<?php echo $firstService['img'] ?>')">
-      <h3 class="p-service-card__title"><?php echo $firstService['title']; ?></h3>
+    <a href="" class="p-service-card c-img c-service-card-container" style="background-image: url('<?php echo esc_url($firstService['img']) ?>')">
+      <h3 class="p-service-card__title"><?php echo esc_html($firstService['title']); ?></h3>
       <div class="p-service-card__item c-inner-card-container u-mt-auto u-mb-16">
-        <h4 class="p-service-card__item__title"><?php echo $firstService['first_content']['title']; ?></h4>
+        <h4 class="p-service-card__item__title"><?php echo esc_html($firstService['first_content']['title']); ?></h4>
         <p class="p-service-card__item__desc">
-          <?php echo $firstService['first_content']['desc']; ?>
+          <?php echo esc_html($firstService['first_content']['desc']); ?>
         </p>
       </div>
       <div class="p-service-card__item c-inner-card-container">
-        <h4 class="p-service-card__item__title"><?php echo $firstService['second_content']['title']; ?></h4>
+        <h4 class="p-service-card__item__title"><?php echo esc_html($firstService['second_content']['title']); ?></h4>
         <p class="p-service-card__item__desc">
-          <?php echo $firstService['second_content']['desc']; ?>
+          <?php echo esc_html($firstService['second_content']['desc']); ?>
         </p>
       </div>
     </a>
-    <a href="" class="p-service-card c-img c-service-card-container" style="background-image: url('<?php echo $secondService['img'] ?>')">
-      <h3 class="p-service-card__title"><?php echo $secondService['title']; ?></h3>
+    <a href="" class="p-service-card c-img c-service-card-container" style="background-image: url('<?php echo esc_url($secondService['img']) ?>')">
+      <h3 class="p-service-card__title"><?php echo esc_html($secondService['title']); ?></h3>
       <div class="p-service-card__item c-inner-card-container u-mt-auto u-mb-16">
-        <h4 class="p-service-card__item__title"><?php echo $secondService['first_content']['title']; ?></h4>
+        <h4 class="p-service-card__item__title"><?php echo esc_html($secondService['first_content']['title']); ?></h4>
         <p class="p-service-card__item__desc">
-          <?php echo $secondService['first_content']['desc']; ?>
+          <?php echo esc_html($secondService['first_content']['desc']); ?>
         </p>
       </div>
       <div class="p-service-card__item c-inner-card-container">
-        <h4 class="p-service-card__item__title"><?php echo $secondService['second_content']['title']; ?></h4>
+        <h4 class="p-service-card__item__title"><?php echo esc_html($secondService['second_content']['title']); ?></h4>
         <p class="p-service-card__item__desc">
-          <?php echo $secondService['second_content']['desc']; ?>
+          <?php echo esc_html($secondService['second_content']['desc']); ?>
         </p>
       </div>
     </a>
@@ -58,9 +58,9 @@ $info = get_field('info');
         class="p-info-layer__map"></iframe>
     </div>
     <div class="p-info-card c-info-card-container">
-      <h3 class="p-info-card__title"><?php echo $info['title']; ?></h3>
+      <h3 class="p-info-card__title"><?php echo esc_html($info['title']); ?></h3>
       <div class="p-info-card__desc">
-        <?php echo $info['desc']; ?> </div>
+        <?php echo esc_html($info['desc']); ?> </div>
     </div>
   </section>
 </main>
