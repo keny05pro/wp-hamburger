@@ -57,7 +57,8 @@
   }
 }
 
-.p-archive-content ,.p-archive-search-content {
+.p-archive-content,
+.p-archive-search-content {
   &__title {
     font-size: 2.8rem;
     line-height: 4rem;
@@ -71,3 +72,12 @@
   }
 }
 
+.p-heading-content {
+  &__desc {
+    margin-top: 25px;
+
+    @include breakpoint(tablet) {
+      margin-top: 55px;
+    }
+  }
+}

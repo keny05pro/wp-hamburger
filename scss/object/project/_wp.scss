@@ -59,25 +59,6 @@ h6.wp-block-heading {
   }
 }
 
-// .wp-block-media-text {
-//     display: flex;
-//     margin-bottom: 30px;
-//     gap: 10px;
-  
-//     @include breakpoint(pc) {
-//       gap: 20px;
-//     }
-//     & img {
-//       display: block;
-//       width: 45%;
-//       height: 50%;
-//       object-fit: cover;
-//       aspect-ratio: 3 / 2;
-//       max-height: 360px;
-//       max-width: 580px;
-//     }
-// }
-
 .wp-block-list {
   & .wp-block-list {
     margin-top: 17px;

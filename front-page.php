@@ -15,7 +15,7 @@ $info = get_field('info');
     </div>
   </section>
   <section class="l-main__service c-service-container">
-    <a href="" class="p-service-card c-img c-service-card-container" style="background-image: url('<?php echo esc_url($firstService['img']) ?>')">
+    <a href="/about" class="p-service-card c-img c-service-card-container" style="background-image: url('<?php echo esc_url($firstService['img']) ?>')">
       <h3 class="p-service-card__title"><?php echo esc_html($firstService['title']); ?></h3>
       <div class="p-service-card__item c-inner-card-container u-mt-auto u-mb-16">
         <h4 class="p-service-card__item__title"><?php echo esc_html($firstService['first_content']['title']); ?></h4>
@@ -30,7 +30,7 @@ $info = get_field('info');
         </p>
       </div>
     </a>
-    <a href="" class="p-service-card c-img c-service-card-container" style="background-image: url('<?php echo esc_url($secondService['img']) ?>')">
+    <a href="/about" class="p-service-card c-img c-service-card-container" style="background-image: url('<?php echo esc_url($secondService['img']) ?>')">
       <h3 class="p-service-card__title"><?php echo esc_html($secondService['title']); ?></h3>
       <div class="p-service-card__item c-inner-card-container u-mt-auto u-mb-16">
         <h4 class="p-service-card__item__title"><?php echo esc_html($secondService['first_content']['title']); ?></h4>
