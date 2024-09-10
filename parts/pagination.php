@@ -14,7 +14,7 @@ if (is_archive()) {
 ?>
 <?php if ($the_query->have_posts()) : ?>
   <section class="l-main__pagenation p-pagenation pagination">
-    <span class="p-pagenation__count u-sp-no-display">page <?php echo $paged; ?>/<?php echo $the_query->max_num_pages; ?></span>
+    <span class="p-pagenation__count u-sp-no-display">page <?php echo esc_html($paged); ?>/<?php echo $the_query->max_num_pages; ?></span>
     <?php
     if ($the_query->max_num_pages > 1) {
       get_option('permalink_structure') ? $format = 'page/%#%/' : $format = '?paged=%#%';

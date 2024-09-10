@@ -43,7 +43,7 @@ function my_theme_enqueue_styles()
 
 }
 
-add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles', 100);
+add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles', 999);
 
 function my_custom_scripts()
 {

@@ -41,11 +41,13 @@
         border: 1px solid $c-gray;
         text-align: center;
         line-height: 3.3rem;
-        margin-left: 15px;
         font-weight: bold;
         color: $c-brown;
         @include breakpoint(sp) {
           display: none;
+        }
+        @include breakpoint(tablet) {
+          margin-left: 15px;
         }
         &.current {
           background-color: $c-brown;
@@ -64,21 +66,4 @@
   }
 }
 
-.p-button {
-  width: 100%;
-  height: 80px;
-  font-weight: bold;
-  background: linear-gradient(to right, #f2ede9, #ded8d3);
-  color: $c-brown;
-  border-radius: 20px;
-  text-align: center;
-  border: 1px solid $c-gray;
-  & span {
-    line-height: 8rem;
-  }
 
-  @include breakpoint(tablet) {
-    width: 50%;
-    max-width: 430px;
-  }
-}

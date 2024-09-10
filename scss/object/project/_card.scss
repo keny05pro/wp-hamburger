@@ -218,22 +218,4 @@
   }
 }
 
-//single
-.p-media-card {
-  display: flex;
-  margin-bottom: 30px;
-  gap: 10px;
 
-  @include breakpoint(pc) {
-    gap: 20px;
-  }
-  &__img {
-    display: block;
-    width: 45%;
-    height: 50%;
-    object-fit: cover;
-    aspect-ratio: 3 / 2;
-    max-height: 360px;
-    max-width: 580px;
-  }
-}

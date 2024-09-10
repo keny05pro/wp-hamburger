@@ -6,7 +6,6 @@ $info = get_field('info');
 
 <?php get_template_part('parts/header'); ?>
 <?php get_template_part('parts/sidebar'); ?>
-<?php wp_head(); ?>
 
 <main class="l-main front-page c-global-container">
   <section class="l-main__hero">
@@ -64,5 +63,4 @@ $info = get_field('info');
     </div>
   </section>
 </main>
-<?php wp_footer(); ?>
 <?php get_template_part('parts/footer'); ?>
