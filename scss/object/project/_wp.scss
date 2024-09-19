@@ -1,0 +1,153 @@
+@use "../../foundation/forwards" as *;
+
+.wp-block-heading {
+  font-weight: bold;
+}
+
+h2.wp-block-heading {
+  font-size: 2.8rem;
+  line-height: 4rem;
+}
+
+h3.wp-block-heading {
+  font-size: 2.4rem;
+  line-height: 3.5rem;
+}
+
+h4.wp-block-heading {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+h5.wp-block-heading {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+h6.wp-block-heading {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.wp-block-quote {
+  background-color: $c-light-gray;
+  & P {
+    // padding: 30px 16px 27px 20px;
+    // padding: 50px 56px 57px 50px;
+    // padding: 50px 60px 47px 50px;
+    padding: 8% 4% 7% 5%;
+    @include breakpoint(tablet) {
+      padding: 6% 7% 7% 6%;
+    }
+    @include breakpoint(l-pc) {
+      padding: 4% 5% 4% 5%;
+    }
+  }
+  //aタグデフォルト
+  & a {
+    &:link {
+      color: #0000ee;
+      text-decoration: underline;
+    }
+
+    &:visited {
+      color: #551a8b;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: #ff0000;
+      text-decoration: underline;
+    }
+  }
+}
+
+.wp-block-list {
+  & .wp-block-list {
+    margin-top: 17px;
+    margin-left: 18px;
+    margin-bottom: 18px;
+  }
+}
+
+.wp-block-code {
+  & code {
+    padding: 50px;
+  }
+}
+
+.wp-block-table {
+  & .has-fixed-layout {
+    width: 100%;
+    border: 1px solid $c-gray;
+    border-collapse: collapse;
+    & td {
+      padding: 30px 0 24px 30px;
+      &:first-child {
+        width: 30%;
+      }
+      &:last-child {
+        width: 70%;
+      }
+    }
+  }
+}
+
+.wp-block-buttons {
+  .wp-block-button {
+    width: 100%;
+    font-weight: bold;
+    color: $c-brown;
+    text-align: center;
+    // background: linear-gradient(to right, #f2ede9, #ded8d3);
+    // border-radius: 20px;
+    // border: 1px solid $c-gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      background-color: transparent;
+    }
+
+    @include breakpoint(tablet) {
+      width: 50%;
+      max-width: 430px;
+    }
+  }
+}
+
+.wp-block-gallery {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  gap: 16px;
+
+  @include breakpoint(tablet) {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @include breakpoint(pc) {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  & .wp-block-image {
+    display: block;
+    width: 100%;
+    max-width: 335px;
+    margin: 0 auto;
+    height: auto;
+    aspect-ratio: 3 / 2;
+
+    @include breakpoint(tablet) {
+      max-width: 350px;
+    }
+    @include breakpoint(pc) {
+      max-width: 440px;
+    }
+  }
+}

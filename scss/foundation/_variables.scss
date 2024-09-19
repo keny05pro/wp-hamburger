@@ -1,0 +1,39 @@
+// カラーパレット
+//背景色
+$c-header-bg: #fff7ef;
+$c-sidebar-bg: #f2ede9;
+$c-main-bg: #fffdfa;
+$c-sidebar-bg-cover: rgba(0, 0, 0, 0.502);
+
+$c-black: #000000;
+$c-white: #ffffff;
+$c-gray: #707070;
+$c-light-gray: #f5f5f5;
+$c-brown: #3c2b1c;
+
+// フォントサイズ
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 18px;
+
+// 高さ
+$sp-header-height: 215px;
+$pc-header-height: 217px;
+$footer-height: 150px;
+
+//幅
+$sidebar-width: 368px;
+
+//幅 max-width
+$sp-max-width: 475px;
+$tablet-max-width:765px;
+
+$sp-card-max-width: 475px;
+$tablet-card-max-width:475px;
+$pc-card-max-width:615px;
+
+// ブレイクポイント
+$breakpoint-sp: 767px;
+$breakpoint-tablet: 768px;
+$breakpoint-pc: 1200px;
+$breakpoint-l-pc: 1600px;

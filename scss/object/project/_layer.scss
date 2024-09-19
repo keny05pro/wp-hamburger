@@ -1,0 +1,64 @@
+@use "../../foundation/forwards" as *;
+
+.p-sidebar-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1500;
+  background-color: $c-sidebar-bg-cover;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  &.active {
+    opacity: 1;
+  }
+
+  @include breakpoint(pc) {
+    display: none;
+  }
+}
+
+.p-info-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: $c-black;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  box-sizing: border-box;
+  &__background {
+    position: relative;
+    width: inherit;
+    height: 100%;
+    height: 50%;
+    background-color: $c-black;
+    opacity: 0.3;
+    z-index: 200;
+
+    @include breakpoint(tablet) {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include breakpoint(pc) {
+      width: 60%;
+      height: 100%;
+    }
+  }
+
+  &__map {
+    position: absolute;
+    width: inherit;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0;
+    opacity: 0.6;
+    z-index: 100;
+  }
+}

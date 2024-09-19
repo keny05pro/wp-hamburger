@@ -1,0 +1,36 @@
+@use "../../foundation/forwards" as *;
+
+// .p-gallery {
+//   width: 100%;
+//   display: grid;
+//   grid-template-rows: 1fr;
+//   grid-template-columns: 1fr;
+//   gap: 16px;
+
+//   @include breakpoint(tablet) {
+//     grid-template-rows: 1fr 1fr;
+//     grid-template-columns: 1fr 1fr;
+//     gap: 20px;
+//   }
+
+//   @include breakpoint(pc) {
+//     grid-template-rows: 1fr 1fr 1fr;
+//     grid-template-columns: 1fr 1fr 1fr;
+//   }
+
+//   &__item {
+//     display: block;
+//     width: 100%;
+//     max-width: 335px;
+//     margin: 0 auto;
+//     height: auto;
+//     aspect-ratio: 3 / 2;
+
+//     @include breakpoint(tablet) {
+//       max-width: 350px;
+//     }
+//     @include breakpoint(pc) {
+//       max-width: 440px;
+//     }
+//   }
+// }

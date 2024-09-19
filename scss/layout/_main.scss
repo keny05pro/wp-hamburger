@@ -1,0 +1,235 @@
+@use "../foundation/forwards" as *;
+
+.main-base {
+  grid-area: main;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  min-height: 64vh;
+  .l-main__hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    &__img {
+      position: absolute;
+      height: 100%;
+    }
+    &__title,
+    &__subtitle {
+      position: relative;
+      z-index: 100;
+    }
+  }
+}
+
+.front-page {
+  @extend .main-base;
+
+  & .l-main {
+    &__hero {
+      height: 285px;
+      @include breakpoint(pc) {
+        height: 530px;
+      }
+    }
+
+    &__service {
+      background-color: $c-main-bg;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include breakpoint(tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 5.5%;
+      }
+    }
+
+    &__info {
+      position: relative;
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+
+      @include breakpoint(tablet) {
+        display: block;
+      }
+    }
+  }
+}
+
+.archive ,.archive-search {
+  @extend .main-base;
+  & .l-main {
+    &__hero {
+      position: relative;
+      height: 285px;
+
+      @include breakpoint(pc) {
+        height: 240px;
+      }
+    }
+
+    &__content {
+      margin-bottom: 20px;
+      @include breakpoint(tablet) {
+        margin-bottom: 35px;
+      }
+
+      @include breakpoint(tablet) {
+        margin-bottom: 70px;
+      }
+    }
+
+    &__products {
+      margin-bottom: 60px;
+      @include breakpoint(tablet) {
+        margin-bottom: 100px;
+      }
+      @include breakpoint(pc) {
+        margin-bottom: 150px;
+      }
+    }
+    &__pagenation {
+      height: auto;
+      margin-bottom: 32px;
+
+      @include breakpoint(tablet) {
+        margin-bottom: 64px;
+      }
+    }
+    // &__alert{
+    //   height: 30vh
+    // }
+  }
+}
+
+.single,.page {
+  @extend .main-base;
+  & .l-main {
+    &__hero {
+      position: relative;
+      height: 225px;
+
+      @include breakpoint(tablet) {
+        height: 500px;
+      }
+    }
+
+    &__heading {
+      margin-top: 35px;
+      @include breakpoint(tablet) {
+        margin-top: 60px;
+      }
+      &__content,
+      &__h3,
+      &__h4,
+      &__h5,
+      &__h6 {
+        margin-bottom: 30px;
+        @include breakpoint(tablet) {
+          margin-bottom: 60px;
+        }
+      }
+    }
+
+    &__quote {
+      margin-bottom: 30px;
+
+      @include breakpoint(tablet) {
+        margin-bottom: 60px;
+      }
+    }
+
+    &__feature {
+      height: auto;
+      margin-bottom: 10%;
+
+      @include breakpoint(tablet) {
+        margin-bottom: 22%;
+      }
+
+      @include breakpoint(pc) {
+        margin-bottom: 30px;
+      }
+    }
+    &__gallery {
+      margin-bottom: 33px;
+
+      @include breakpoint(tablet) {
+        margin-bottom: 60px;
+      }
+
+      @include breakpoint(pc) {
+        margin-bottom: 55px;
+      }
+    }
+
+    &__list {
+      margin-bottom: 26px;
+
+      @include breakpoint(tablet) {
+        margin-bottom: 56px;
+      }
+
+      &__item {
+        margin-bottom: 17px;
+
+        @include breakpoint(tablet) {
+          margin-left: 50px;
+        }
+      }
+    }
+
+    &__code {
+      background-color: $c-light-gray;
+      height: 237px;
+      margin-bottom: 30px;
+
+      @include breakpoint(tablet) {
+        margin-bottom: 60px;
+      }
+
+      @include breakpoint(pc) {
+        margin-bottom: 50px;
+      }
+    }
+
+    &__table {
+      margin-bottom: 60px;
+
+      @include breakpoint(tablet) {
+        margin-bottom: 60px;
+      }
+    }
+
+    &__button {
+      margin-bottom: 30px;
+
+      @include breakpoint(tablet) {
+        margin-bottom: 60px;
+      }
+
+      @include breakpoint(pc) {
+        margin-bottom: 100px;
+      }
+    }
+
+    &__text {
+      font-weight: bold;
+      margin-bottom: 70px;
+
+      @include breakpoint(tablet) {
+        margin-bottom: 150px;
+      }
+
+      @include breakpoint(pc) {
+        margin-bottom: 275px;
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+@use "../../foundation/forwards" as *;
+
+.c-global-container {
+  padding: 0 20px;
+  height: auto;
+  @include breakpoint(tablet) {
+    padding: 0 5%;
+  }
+  @include breakpoint(pc) {
+    padding: 0 120px;
+  }
+
+  &--sub {
+    @include breakpoint(pc) {
+      padding: 0 100px;
+    }
+  }
+}
+
+.c-hero-title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @include breakpoint(tablet) {
+    gap: 19px;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.c-menu-container {
+  padding: 8px 11px 0 46px;
+
+  @include breakpoint(tablet) {
+    padding: 20px 25px 0 46px;
+  }
+  @include breakpoint(pc) {
+    padding: 84px 20% 0 46px;
+  }
+}
+
+.c-menu-list-container {
+  padding: 40px 0 0 20px;
+
+  @include breakpoint(tablet) {
+    padding: 32px 0 0 20px;
+  }
+}
+
+.c-service-container {
+  padding: 20px 0 30px;
+  margin: 0 auto;
+  max-width: 95%;
+  @include breakpoint(tablet) {
+    padding: 40px 0;
+  }
+  @include breakpoint(pc) {
+    padding: 120px 0 130px;
+  }
+}
+
+.c-service-card-container {
+  padding: 13px 16px 16px;
+  @include breakpoint(tablet) {
+    padding: 16px;
+  }
+  @include breakpoint(pc) {
+    padding: 28px 15px 15px;
+  }
+}
+
+.c-inner-card-container {
+  padding: 16px;
+}
+
+.c-info-card-container {
+  padding: 42px calc(40px - 20px) 57px; //calc 40px(デザインカンプ) 20px(global-container)
+  height: 100%;
+  @include breakpoint(tablet) {
+    padding: 42px 0 40px;
+  }
+
+  @include breakpoint(pc) {
+    padding: 86px 0 75px;
+  }
+}
+
+.c-footer-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 0;
+
+  @include breakpoint(tablet) {
+    padding: 30px 0 24px;
+  }
+
+  @include breakpoint(pc) {
+    padding: 41px 0 27px;
+  }
+}
+
+.c-archive-container,.c-archive-search-container {
+  height: auto;
+  padding: 32px 0;
+
+  @include breakpoint(tablet) {
+    padding: 40px 0 32px;
+  }
+  @include breakpoint(pc) {
+    padding: 64px 0;
+  }
+}
+.c-product-card-container {
+  padding: 32px 16px 44px;
+
+  @include breakpoint(tablet) {
+    padding: 30px 60px 40px 36px;
+  }
+  @include breakpoint(l-pc) {
+    padding: 56px 104px 60px 64px;
+  }
+}
+
+.c-quote-container {
+  height: auto;
+  padding: 30px 16px 27px;
+
+  @include breakpoint(tablet) {
+    padding: 50px 56px 56px 50px;
+  }
+  @include breakpoint(pc) {
+    padding: 50px 60px 47px 50px;
+  }
+}
+
+.c-list-container {
+  margin: 30px 0 ;
+
+  @include breakpoint(tablet) {
+    margin: 30px 50px ;
+  }
+}

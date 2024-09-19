@@ -1,0 +1,24 @@
+@use "../../foundation/forwards" as *;
+$footer-height: 150px;
+.c-grid {
+  display: grid;
+  grid-template-rows: $sp-header-height 1fr $footer-height;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header header sidebar"
+    "main main main"
+    "footer footer footer";
+
+  @include breakpoint(pc) {
+    grid-template-rows: $pc-header-height 1fr $footer-height;
+    grid-template-columns: 1fr 1fr 20%;
+    grid-template-areas:
+      "header header sidebar"
+      "main main sidebar"
+      "footer footer footer";
+  }
+
+  @include breakpoint(l-pc) {
+    grid-template-columns: 1fr 1fr $sidebar-width;
+  }
+}

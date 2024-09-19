@@ -1,0 +1,35 @@
+@use "forwards" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 2.4rem;
+  font-family: Roboto, "Font Awesome 5 Free";
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: $c-main-bg;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+input {
+  cursor: pointer;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}

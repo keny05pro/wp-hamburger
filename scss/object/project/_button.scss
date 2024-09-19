@@ -1,0 +1,69 @@
+@use "../../foundation/forwards" as *;
+
+.p-detail-btn {
+  display: block;
+  font-weight: bold;
+  color: $c-gray;
+  background-color: $c-white;
+  text-align: center;
+  border-radius: 20px;
+}
+.p-pagenation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $c-gray;
+  height: 22px;
+
+  @include breakpoint(tablet) {
+    justify-content: center;
+  }
+  &__count {
+    margin-right: 15px;
+    white-space: nowrap;
+  }
+  & ul {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+
+    @include breakpoint(sp) {
+      width: 100%;
+      justify-content: space-between;
+    }
+    & li {
+      width: auto;
+      height: 100%;
+      & .page-numbers {
+        display: block;
+        width: 35px;
+        height: 35px;
+        border: 1px solid $c-gray;
+        text-align: center;
+        line-height: 3.3rem;
+        font-weight: bold;
+        color: $c-brown;
+        @include breakpoint(sp) {
+          display: none;
+        }
+        @include breakpoint(tablet) {
+          margin-left: 15px;
+        }
+        &.current {
+          background-color: $c-brown;
+          color: $c-white;
+        }
+
+        &.prev,
+        &.next {
+          display: flex;
+          align-items: center;
+          border: none;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+

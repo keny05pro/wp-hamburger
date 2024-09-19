@@ -1,0 +1,26 @@
+@use "../foundation/forwards" as *;
+
+.l-sidebar {
+  grid-area: sidebar;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.7s ease;
+  z-index: 2000;
+
+  @include breakpoint(pc) {
+    position: relative;
+    transform: translateX(0);
+  }
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  & .p-menu {
+    z-index: 1000;
+  }
+}

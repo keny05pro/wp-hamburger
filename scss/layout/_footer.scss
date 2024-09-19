@@ -1,0 +1,22 @@
+@use "../foundation/forwards" as *;
+
+.l-footer {
+  grid-area: footer;
+  background-image: url("../../images/footer/footer.png");
+  color: $c-white;
+  text-align: center;
+  & span {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+
+    @include breakpoint(tablet) {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+
+  & small {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}

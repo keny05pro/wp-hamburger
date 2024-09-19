@@ -1,0 +1,31 @@
+@use "../../foundation/forwards" as *;
+
+.u-no-display{
+  display: none;
+}
+
+.u-over-hidden{
+  overflow: hidden;
+}
+.u-pc-no-display {
+  display: block;
+  @include breakpoint(pc) {
+    display: none;
+  }
+}
+
+.u-sp-no-display {
+  @include breakpoint(sp) {
+    display: none;
+  }
+}
+
+
+
+.u-rotate-reverse{
+  transform: rotate(180deg);
+}
+
+.u-flex-reverse{
+  flex-direction: row-reverse;
+}
