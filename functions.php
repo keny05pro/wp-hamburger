@@ -76,11 +76,6 @@ if (! function_exists('get_field')) {
 		// 実際には何も実行しません
 		return '';
 	}
-	function wp_pagenavi()
-	{
-		// 実際には何も実行しません
-		return '';
-	}
 }
 
 //カテゴリー項目追加
