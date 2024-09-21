@@ -24,6 +24,7 @@ $archive_query = new WP_Query($args);
 
 <?php get_template_part('parts/header'); ?>
 <?php get_template_part('parts/sidebar'); ?>
+<?php wp_head(); ?>
 
 <main class="l-main archive c-global-container c-global-container--sub">
   <section class="l-main__hero">
@@ -42,7 +43,6 @@ $archive_query = new WP_Query($args);
   </section>
     <section class="l-main__products">
       <?php foreach ($archive_query->posts as $post) : ?>
-        <?php wp_link_pages(); ?>
         <div class="p-product-card">
           <div class="p-product-card__img" style="background-image: url('<?php echo esc_url(get_field('hero_img', $post->ID)) ?>')"></div>
           <div class="p-product-card__content c-product-card-container">
