@@ -29,9 +29,6 @@ h6.wp-block-heading {
 .wp-block-quote {
   background-color: $c-light-gray;
   & P {
-    // padding: 30px 16px 27px 20px;
-    // padding: 50px 56px 57px 50px;
-    // padding: 50px 60px 47px 50px;
     padding: 8% 4% 7% 5%;
     @include breakpoint(tablet) {
       padding: 6% 7% 7% 6%;

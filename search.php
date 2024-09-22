@@ -16,8 +16,8 @@ $args = array(
 $search_query = new WP_Query($args);
 
 ?>
-<?php get_template_part('parts/header'); ?>
-<?php get_template_part('parts/sidebar'); ?>
+<?php get_header(); ?>
+<?php get_sidebar (); ?>
 
 <main class="l-main archive c-global-container c-global-container--sub">
   <section class="l-main__hero">
@@ -52,10 +52,10 @@ $search_query = new WP_Query($args);
     <?php else : ?>
     </section>
     <section class="l-main__alert">
-      <span class=""><?php the_search_query(true); ?>に一致する検索結果はありませんでした。</span>
+      <span class="p-alert">「<?php the_search_query(true); ?>」に一致する検索結果はありませんでした。</span>
     </section>
   <?php endif;
   wp_reset_query(); ?>
   <?php get_template_part('parts/pagination'); ?>
 </main>
-<?php get_template_part('parts/footer'); ?>
+<?php get_footer (); ?>

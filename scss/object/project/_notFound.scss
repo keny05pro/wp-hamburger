@@ -1,0 +1,44 @@
+@use "../../foundation/forwards" as *;
+
+.p-not-found {
+  margin: 10px;
+  &__title {
+    margin-top: 30px;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    @include breakpoint(tablet) {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+  }
+
+  &__desc {
+    margin-top: 20px;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    @include breakpoint(tablet) {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+  }
+
+  & a {
+    display: block;
+    margin-top: 20px;
+    &:link {
+      color: #0000ee;
+      text-decoration: underline;
+    }
+
+    &:visited {
+      color: #551a8b;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: #ff0000;
+      text-decoration: underline;
+    }
+  }
+}

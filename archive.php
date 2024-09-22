@@ -22,9 +22,8 @@ $archive_query = new WP_Query($args);
 
 ?>
 
-<?php get_template_part('parts/header'); ?>
-<?php get_template_part('parts/sidebar'); ?>
-<?php wp_head(); ?>
+<?php get_header(); ?>
+<?php get_sidebar (); ?>
 
 <main class="l-main archive c-global-container c-global-container--sub">
   <section class="l-main__hero">
@@ -56,10 +55,12 @@ $archive_query = new WP_Query($args);
         </div>
       <?php endforeach; ?>
     <?php else : ?>
-      <span>現在開発中です。</span>
+      <section class="l-main__alert">
+      <span class="p-alert">現在開発中です。</span>
+    </section>
     </section>
   <?php endif;
   wp_reset_query(); ?>
   <?php get_template_part('parts/pagination'); ?>
 </main>
-<?php get_template_part('parts/footer'); ?>
+<?php get_footer (); ?>

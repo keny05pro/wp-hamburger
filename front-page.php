@@ -20,16 +20,15 @@ $info_title = isset(get_field('info')['title']) ? get_field('info')['title'] : '
 $info_desc = isset(get_field('info')['desc']) ? get_field('info')['desc'] : '';
 ?>
 
-<?php get_template_part('parts/header'); ?>
-<?php get_template_part('parts/sidebar'); ?>
-
+<?php get_header(); ?>
+<?php get_sidebar (); ?>
 <?php if (!is_plugin_active('advanced-custom-fields/acf.php')) :
   echo 'ACF プラグインを有効にしてください。';
 else :
 ?>
   <main class="l-main front-page c-global-container">
     <section class="l-main__hero">
-      <div class="l-main__hero__img c-img--full" style="background-image: url('<?php echo esc_url(get_field('hero_img') ? get_field('hero_img') : '') ?>')"></div>
+      <div class="l-main__hero__img c-img--full" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : '') ?>')"></div>
       <div class="l-main__hero__title p-hero-title">
         <h2 class="p-hero-title__main"><?php the_title() ?></h2>
       </div>
@@ -84,4 +83,4 @@ else :
     </section>
   </main>
 <?php endif; ?>
-<?php get_template_part('parts/footer'); ?>
+<?php get_footer (); ?>

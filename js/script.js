@@ -16,3 +16,11 @@
       body.classList.remove("u-over-hidden");
     });
   });
+
+  targets.forEach((target) => {
+    window.addEventListener("resize", () => {
+      target.classList.remove("active");
+      body.classList.remove("u-over-hidden");
+    });
+  });
+  

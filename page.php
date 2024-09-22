@@ -1,11 +1,11 @@
-<?php get_template_part('parts/header'); ?>
-<?php get_template_part('parts/sidebar'); ?>
+<?php get_header(); ?>
+<?php get_sidebar (); ?>
 
 <?php if (have_posts()) :
   while (have_posts()) : the_post(); ?>
     <main class="l-main page c-global-container c-global-container--sub" <?php post_class(); ?>>
       <section class="l-main__hero">
-        <div class="l-main__hero__img c-img--full" style="background-image: url('<?php echo esc_html(get_field('hero_img')) ?>')"></div>
+        <div class="l-main__hero__img c-img--full" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : '') ?>')"></div>
         <div class="l-main__hero__title p-hero-title">
           <h2 class="p-hero-title__main p-hero-title__main--page"><?php the_title() ?></h2>
         </div>
@@ -26,4 +26,4 @@
 endif;
 ?>
 <?php wp_footer(); ?>
-<?php get_template_part('parts/footer'); ?>
+<?php get_footer (); ?>
