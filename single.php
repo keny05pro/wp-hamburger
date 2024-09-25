@@ -5,7 +5,7 @@
     while (have_posts()) : the_post(); ?>
         <main class="l-main single c-global-container c-global-container--sub" <?php post_class(); ?>>
             <section class="l-main__hero">
-                <div class="l-main__hero__img c-img--full" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : '') ?>')"></div>
+                <div class="l-main__hero__img c-img--full" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/assets/images/main/mainvisual-pc@2x.jpg') ?>')"></div>
                 <div class="l-main__hero__title p-hero-title">
                     <h2 class="p-hero-title__main p-hero-title__main--single"><?php the_title() ?></h2>
                 </div>
