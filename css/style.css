@@ -1177,10 +1177,10 @@ img {
   background-color: transparent;
   position: relative;
 }
-.p-taxonomy-card__content__category:not(:last-child)::after {
+.p-taxonomy-card__content__categories .p-category:not(:last-of-type)::after {
   content: ",";
 }
-.p-taxonomy-card__content__tag {
+.p-taxonomy-card__content__tags .p-tag {
   display: inline-block;
   width: 78px;
   height: 24px;
@@ -1227,6 +1227,19 @@ img {
   text-align: right;
   color: #3c2b1c;
   text-decoration: underline;
+}
+
+.p-taxonomy-card__content__category a:not(:last-child)::after {
+  display: inline-block;
+  content: ", ";
+}
+
+.p-taxonomy-card__content__category a {
+  border: 1px solid red;
+}
+
+.p-taxonomy-card__content__category a::after {
+  color: blue;
 }
 
 .p-hamburger {

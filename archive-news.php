@@ -13,7 +13,7 @@
   <?php if (have_posts()) : ?>
     <section class="l-main__content c-archive-container">
       <h2 class="p-archive-content__title">
-      <?php echo esc_html($post_type->label); ?>
+        <?php echo esc_html($post_type->label); ?>
       </h2>
       <p class="p-archive-content__desc">
         <?php echo esc_html($post_type->description); ?>
@@ -26,33 +26,36 @@
           <div class="p-taxonomy-card__content c-taxonomy-card-container">
             <?php get_template_part('parts/new'); ?>
             <h3 class="p-taxonomy-card__content__title"><?php echo the_title(); ?></h3>
-            <?php
-            $custom_categories = get_the_terms(get_the_ID(), 'news_category');
-            if ($custom_categories) {
-              foreach ($custom_categories as $category) {
-                $category_link = get_term_link($category);
-                if (!is_wp_error($category_link)) {
-                  echo '<span class="p-taxonomy-card__content__category">';
-                  echo '<a href="' . esc_url($category_link) . '">' . esc_html($category->name) . '</a>';
-                  echo '</span>';
+            <div class="p-taxonomy-card__content__categories">
+              <?php
+              $custom_categories = get_the_terms(get_the_ID(), 'news_category');
+              if ($custom_categories) {
+                foreach ($custom_categories as $category) {
+                  $category_link = get_term_link($category);
+                  if (!is_wp_error($category_link)) {
+                    echo '<span class="p-category">';
+                    echo '<a href="' . esc_url($category_link) . '">' . esc_html($category->name) . '</a>';
+                    echo '</span>';
+                  }
                 }
               }
-            }
-            ?>
-            </br>
-            <?php
-            $custom_tags = get_the_terms(get_the_ID(), 'news_tag');
-            if ($custom_tags) {
-              foreach ($custom_tags as $tag) {
-                $tag_link = get_term_link($tag);
-                if (!is_wp_error($category_link)) {
-                  echo '<span class="p-taxonomy-card__content__tag">';
-                  echo '<a href="' . esc_url($tag_link) . '">' . esc_html($tag->name) . '</a>';
-                  echo '</span>';
+              ?>
+            </div>
+            <div class="p-taxonomy-card__content__tags">
+              <?php
+              $custom_tags = get_the_terms(get_the_ID(), 'news_tag');
+              if ($custom_tags) {
+                foreach ($custom_tags as $tag) {
+                  $tag_link = get_term_link($tag);
+                  if (!is_wp_error($category_link)) {
+                    echo '<span class="p-tag">';
+                    echo '<a href="' . esc_url($tag_link) . '">' . esc_html($tag->name) . '</a>';
+                    echo '</span>';
+                  }
                 }
               }
-            }
-            ?>
+              ?>
+            </div>
             <p class="p-taxonomy-card__content__desc"><?php echo esc_html(get_field('description')) ?></p>
             <a href="<?php echo esc_url($post->guid) ?>" class="p-taxonomy-card__content__btn">詳しく見る</a>
           </div>
@@ -63,8 +66,8 @@
       } ?>
     <?php else : ?>
     </section>
-      <section class="l-main__alert">
-        <span class="p-alert">現在開発中です。</span>
+    <section class="l-main__alert">
+      <span class="p-alert">現在開発中です。</span>
     </section>
   <?php endif;
   wp_reset_query(); ?>
