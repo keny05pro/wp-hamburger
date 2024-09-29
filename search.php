@@ -17,14 +17,14 @@ $search_query = new WP_Query($args);
 
 ?>
 <?php get_header(); ?>
-<?php get_sidebar (); ?>
+<?php get_sidebar(); ?>
 
 <main class="l-main archive c-global-container c-global-container--sub">
   <section class="l-main__hero">
     <div class="l-main__hero__img c-img--full" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/assets/images/main/mainvisual-pc@2x.jpg') ?>')"></div>
     <div class="l-main__hero__title p-hero-title">
       <h2 class="p-hero-title__main p-hero-title__main--archive">Search:</h2>
-      <span class="p-hero-title__sub"><?php the_search_query(true); ?></span>
+      <span class="p-hero-title__sub"><?php the_search_query(true); ?>(<?php echo $search_query->found_posts; ?>件)</span>
     </div>
   </section>
   <?php if ($search_query->have_posts()) : ?>
@@ -40,6 +40,7 @@ $search_query = new WP_Query($args);
         <div class="p-product-card">
           <div class="p-product-card__img" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . '/assets/images/others/no_image.jpg') ?>')"></div>
           <div class="p-product-card__content c-product-card-container">
+            <?php get_template_part('parts/new'); ?>
             <h3 class="p-product-card__content__name"><?php echo esc_html($post->post_title) ?></h3>
             <h4 class="p-product-card__content__title"><?php echo esc_html(get_field('heading', $post->ID)) ?></h4>
             <p class="p-product-card__content__desc">
@@ -49,6 +50,7 @@ $search_query = new WP_Query($args);
           </div>
         </div>
       <?php endforeach; ?>
+      <?php get_template_part('parts/pagination'); ?>
     <?php else : ?>
     </section>
     <section class="l-main__alert">
@@ -56,6 +58,5 @@ $search_query = new WP_Query($args);
     </section>
   <?php endif;
   wp_reset_query(); ?>
-  <?php get_template_part('parts/pagination'); ?>
 </main>
-<?php get_footer (); ?>
+<?php get_footer(); ?>

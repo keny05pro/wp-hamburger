@@ -148,3 +148,17 @@ h6.wp-block-heading {
     }
   }
 }
+
+.yarpp {
+  & ul {
+    display: grid; 
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(0, 335px)); 
+    justify-items: stretch;
+
+    @include breakpoint(pc) {
+      grid-template-columns: repeat(auto-fit,minmax(335, 430px)); 
+
+    }
+  }
+}

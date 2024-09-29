@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
-<?php echo get_template_directory_uri(); ?>
 <?php if (have_posts()) :
   while (have_posts()) : the_post(); ?>
     <main class="l-main page c-global-container c-global-container--sub" <?php post_class(); ?>>
@@ -21,6 +20,8 @@
         </section>
       <?php endif; ?>
       <?php the_content(); ?>
+
+
     </main>
 <?php endwhile;
 endif;

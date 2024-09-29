@@ -142,3 +142,16 @@
     margin: 30px 50px ;
   }
 }
+
+
+
+.c-goods-card-container,.c-taxonomy-card-container {
+  padding: 32px 16px 44px;
+
+  @include breakpoint(tablet) {
+    padding: 30px 60px 40px 36px;
+  }
+  @include breakpoint(l-pc) {
+    padding: 56px 104px 60px 64px;
+  }
+}

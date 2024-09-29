@@ -28,8 +28,12 @@
               <li class="p-menu__list-item"><a href="<?php echo get_category_link($c_cat->cat_ID); ?>"><?php echo $c_cat->name; ?></a></li>
 
             <?php endforeach; ?>
+
           </ul>
         <?php endforeach; ?>
+        </div>
+        <div class="p-menu__item">
+          <span class="p-menu__item-title"><a href="<?php echo get_post_type_archive_link('news'); ?>">お知らせ</a></span>
         </div>
     </div>
   </div>

@@ -37,7 +37,7 @@ function my_theme_enqueue_styles()
 	// デフォルトのstyle.cssの読み込みを解除する
 	wp_dequeue_style('theme-style');
 	wp_deregister_style('theme-style');
-
+	wp_dequeue_style('pagenavi-css'); 
 	// 新しいCSSファイルを読み込む
 	wp_enqueue_style('custom-style', get_template_directory_uri() . '/css/style.css', array(), '1.0.0', 'all');
 	wp_enqueue_style('font-awesome', get_template_directory_uri() . '/css/all.min.css', array(), '1.0.0', 'all');
@@ -70,6 +70,23 @@ if (! function_exists('get_field')) {
 	}
 
 	function z_taxonomy_image_url()
+	{
+		// 実際には何も実行しません
+		return '';
+	}
+
+	function the_score()
+	{
+		// 実際には何も実行しません
+		return '';
+	}
+
+	function yapb_get_thumbnail()
+	{
+		// 実際には何も実行しません
+		return '';
+	}
+	function wp_pagenavi()
 	{
 		// 実際には何も実行しません
 		return '';

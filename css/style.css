@@ -661,6 +661,20 @@ img {
   }
 }
 
+.c-goods-card-container, .c-taxonomy-card-container {
+  padding: 32px 16px 44px;
+}
+@media (min-width: 768px) {
+  .c-goods-card-container, .c-taxonomy-card-container {
+    padding: 30px 60px 40px 36px;
+  }
+}
+@media (min-width: 1600px) {
+  .c-goods-card-container, .c-taxonomy-card-container {
+    padding: 56px 104px 60px 64px;
+  }
+}
+
 .c-img, .c-img--full {
   background-repeat: no-repeat;
   background-size: cover;
@@ -742,6 +756,85 @@ img {
   align-items: center;
   border: none;
   width: auto;
+}
+
+.wp-pagenavi {
+  text-align: center;
+}
+.wp-pagenavi .previouspostslink, .wp-pagenavi .nextpostslink {
+  display: flex;
+}
+.wp-pagenavi .pages, .wp-pagenavi .previouspostslink, .wp-pagenavi .nextpostslink, .wp-pagenavi .p-arrow {
+  border: none;
+}
+.wp-pagenavi .pages, .wp-pagenavi .wp_page, .wp-pagenavi [aria-current=page] {
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  .wp-pagenavi .pages, .wp-pagenavi .wp_page, .wp-pagenavi [aria-current=page] {
+    display: none;
+  }
+}
+.wp-pagenavi .previouspostslink, .wp-pagenavi .nextpostslink {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+}
+@media (max-width: 767px) {
+  .wp-pagenavi .previouspostslink, .wp-pagenavi .nextpostslink {
+    display: flex;
+  }
+}
+@media (max-width: 767px) {
+  .wp-pagenavi .nextpostslink {
+    margin-left: auto;
+    transform: translateX(-50%);
+  }
+}
+.wp-pagenavi .nextpostslink .p-arrow {
+  transform: translate(0%, 18%);
+}
+@media (min-width: 768px) {
+  .wp-pagenavi .nextpostslink .p-arrow {
+    transform: translate(25%, 20%);
+  }
+}
+.wp-pagenavi .previouspostslink .p-arrow {
+  transform: translate(0%, -12%) rotate(180deg);
+}
+@media (min-width: 768px) {
+  .wp-pagenavi .previouspostslink .p-arrow {
+    transform: translate(25%, 20%) rotate(180deg);
+  }
+}
+.wp-pagenavi .wp_page {
+  padding: 6px 12px;
+  margin-left: 15px;
+}
+.wp-pagenavi .current {
+  padding: 7px 13px;
+  margin-left: 15px;
+}
+.wp-pagenavi .pages::before {
+  content: "page ";
+}
+.wp-pagenavi .wp_page {
+  border: 1px solid #707070;
+}
+.wp-pagenavi .current {
+  background-color: #3c2b1c;
+  color: #ffffff;
+}
+.wp-pagenavi .p-pre, .wp-pagenavi .p-next {
+  white-space: nowrap;
+  line-height: 35px;
+  display: block;
+}
+@media (min-width: 768px) {
+  .wp-pagenavi .p-pre, .wp-pagenavi .p-next {
+    display: none;
+  }
 }
 
 .p-service-card {
@@ -926,6 +1019,21 @@ img {
   width: 100%;
   height: auto;
   background-color: #3c2b1c;
+  position: relative;
+}
+.p-product-card__content__label {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  top: 0;
+  right: 0;
+  background-color: #ff8a00;
+  text-align: center;
+  line-height: 55px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  font-family: M1m;
+  letter-spacing: -0.1em;
 }
 .p-product-card__content__name {
   font-size: 2rem;
@@ -976,6 +1084,127 @@ img {
     height: 76px;
     line-height: 7.6rem;
   }
+}
+
+.p-goods-card {
+  width: 100%;
+  border: 1px solid black;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  max-width: 430px;
+}
+.p-goods-card img {
+  max-height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-goods-card__content {
+  background-color: #F9F0E2;
+  flex: 1;
+}
+
+.p-taxonomy-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: #3c2b1c;
+}
+.p-taxonomy-card:not(:last-child) {
+  margin-bottom: 20px;
+}
+@media (min-width: 1200px) {
+  .p-taxonomy-card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+.p-taxonomy-card:last-child {
+  margin-bottom: 60px;
+}
+@media (min-width: 768px) {
+  .p-taxonomy-card:last-child {
+    margin-bottom: 100px;
+  }
+}
+@media (min-width: 1200px) {
+  .p-taxonomy-card:last-child {
+    margin-bottom: 150px;
+  }
+}
+@media (min-width: 768px) {
+  .p-taxonomy-card {
+    flex-direction: row;
+  }
+}
+.p-taxonomy-card__img {
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 230px;
+}
+@media (min-width: 768px) {
+  .p-taxonomy-card__img {
+    height: auto;
+  }
+}
+.p-taxonomy-card__content {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  position: relative;
+}
+.p-taxonomy-card__content__category:not(:last-child)::after {
+  content: ",";
+}
+.p-taxonomy-card__content__tag {
+  display: inline-block;
+  width: 78px;
+  height: 24px;
+  background-color: #707070;
+  border-radius: 17px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 8px;
+  margin-right: 8px;
+}
+.p-taxonomy-card__content__label {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  top: 0;
+  right: 0;
+  background-color: #ff8a00;
+  text-align: center;
+  line-height: 55px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  font-family: M1m;
+  letter-spacing: -0.1em;
+}
+.p-taxonomy-card__content__title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3rem;
+  margin-bottom: 20px;
+}
+@media (min-width: 1200px) {
+  .p-taxonomy-card__content__title {
+    font-size: 3.6rem;
+    line-height: 5rem;
+    margin-bottom: 44px;
+  }
+}
+.p-taxonomy-card__content__desc {
+  margin-top: 16px;
+}
+.p-taxonomy-card__content__btn {
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+  color: #3c2b1c;
+  text-decoration: underline;
 }
 
 .p-hamburger {
@@ -1423,6 +1652,18 @@ h6.wp-block-heading {
 @media (min-width: 1200px) {
   .wp-block-gallery .wp-block-image {
     max-width: 440px;
+  }
+}
+
+.yarpp ul {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(0, 335px));
+  justify-items: stretch;
+}
+@media (min-width: 1200px) {
+  .yarpp ul {
+    grid-template-columns: repeat(auto-fit, minmax(335, 430px));
   }
 }
 

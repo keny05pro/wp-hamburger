@@ -1,17 +1,17 @@
-<?php
-global $archive_paged;
-global $archive_query;
-global $search_paged;
-global $search_query;
+<!-- <?php
+      global $archive_paged;
+      global $archive_query;
+      global $search_paged;
+      global $search_query;
 
-if (is_archive()) {
-  $paged = $archive_paged;
-  $the_query = $archive_query;
-} elseif (is_search()) {
-  $paged = $search_paged;
-  $the_query = $search_query;
-}
-?>
+      if (is_archive()) {
+        $paged = $archive_paged;
+        $the_query = $archive_query;
+      } elseif (is_search()) {
+        $paged = $search_paged;
+        $the_query = $search_query;
+      }
+      ?>
 <?php if ($the_query->have_posts()) : ?>
   <section class="l-main__pagenation p-pagenation pagination">
     <span class="p-pagenation__count u-sp-no-display">page <?php echo esc_html($paged); ?>/<?php echo $the_query->max_num_pages; ?></span>
@@ -36,4 +36,9 @@ if (is_archive()) {
     }
     ?>
   </section>
-<?php endif; ?>
+<?php endif; ?> -->
+
+
+<?php if (function_exists('wp_pagenavi')) {
+  wp_pagenavi();
+} ?>
