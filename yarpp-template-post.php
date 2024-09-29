@@ -24,8 +24,8 @@ Notes:
 
 */
 ?>
-
-<h3>おすすめ商品</h3>
+<?php get_template_part('parts/recommend'); ?>
+<h3><i class="fa-solid fa-star"></i>おすすめ商品</h3>
 <?php if (have_posts()) : ?>
   <ul>
     <?php
@@ -43,7 +43,14 @@ Notes:
         <div class="p-goods-card__content c-goods-card-container">
           <h3 class="p-goods-card__content__title"><?php the_title(); ?></h3>
           <p class="p-goods-card__content__desc">
-            <?php echo get_the_excerpt(); ?>
+            <?php
+            if (mb_strlen(get_field('description'), 'UTF-8') > 40) {
+              $title = mb_substr(get_field('description'), 0, 40, 'UTF-8') . '...';
+              echo $title;
+            } else {
+              echo get_field('description');
+            }
+            ?>
           </p>
           <a href="<?php the_permalink(); ?>" class="p-goods-card__content__btn">詳しく見る</a>
         </div>

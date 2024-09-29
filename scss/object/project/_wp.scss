@@ -155,10 +155,19 @@ h6.wp-block-heading {
     gap: 20px;
     grid-template-columns: repeat(auto-fit,minmax(0, 335px)); 
     justify-items: stretch;
-
+    margin-top: 25px;
     @include breakpoint(pc) {
       grid-template-columns: repeat(auto-fit,minmax(335, 430px)); 
 
     }
+  }
+}
+
+
+.p-recommend{
+  margin-bottom: 120px;
+
+  &__title{
+    margin-bottom: 25px;
   }
 }

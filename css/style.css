@@ -419,6 +419,9 @@ img {
     margin-bottom: 275px;
   }
 }
+.single .l-main__recommend, .page .l-main__recommend {
+  margin-bottom: 120px;
+}
 
 .l-sidebar {
   grid-area: sidebar;
@@ -608,17 +611,20 @@ img {
   }
 }
 
-.c-archive-container, .c-archive-search-container {
+.c-archive-container,
+.c-archive-search-container {
   height: auto;
   padding: 32px 0;
 }
 @media (min-width: 768px) {
-  .c-archive-container, .c-archive-search-container {
+  .c-archive-container,
+  .c-archive-search-container {
     padding: 40px 0 32px;
   }
 }
 @media (min-width: 1200px) {
-  .c-archive-container, .c-archive-search-container {
+  .c-archive-container,
+  .c-archive-search-container {
     padding: 64px 0;
   }
 }
@@ -661,18 +667,22 @@ img {
   }
 }
 
-.c-goods-card-container, .c-taxonomy-card-container {
+.c-taxonomy-card-container {
   padding: 32px 16px 44px;
 }
 @media (min-width: 768px) {
-  .c-goods-card-container, .c-taxonomy-card-container {
+  .c-taxonomy-card-container {
     padding: 30px 60px 40px 36px;
   }
 }
 @media (min-width: 1600px) {
-  .c-goods-card-container, .c-taxonomy-card-container {
+  .c-taxonomy-card-container {
     padding: 56px 104px 60px 64px;
   }
+}
+
+.c-goods-card-container {
+  padding: 25px 20px 20px 20px;
 }
 
 .c-img, .c-img--full {
@@ -1100,8 +1110,20 @@ img {
      object-fit: cover;
 }
 .p-goods-card__content {
-  background-color: #F9F0E2;
+  background-color: #f9f0e2;
+  display: flex;
+  flex-direction: column;
   flex: 1;
+}
+.p-goods-card__content__title, .p-goods-card__content__desc {
+  margin-bottom: 25px;
+}
+.p-goods-card__content__btn {
+  display: block;
+  text-align: right;
+  margin-top: auto;
+  color: #3c2b1c;
+  text-decoration: underline;
 }
 
 .p-taxonomy-card {
@@ -1660,11 +1682,19 @@ h6.wp-block-heading {
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(0, 335px));
   justify-items: stretch;
+  margin-top: 25px;
 }
 @media (min-width: 1200px) {
   .yarpp ul {
     grid-template-columns: repeat(auto-fit, minmax(335, 430px));
   }
+}
+
+.p-recommend {
+  margin-bottom: 120px;
+}
+.p-recommend__title {
+  margin-bottom: 25px;
 }
 
 .p-not-found {
